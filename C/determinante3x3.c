@@ -1,4 +1,4 @@
-//Calculo de determinante de uma matriz 3x3 usando a regra de Sarrus
+//Cálculo de determinante de uma matriz 3x3 usando a regra de Sarrus
 #include <stdio.h>
 
 int main() {

@@ -1,4 +1,4 @@
-//Mostra o numero do dia no ano de uma data no formato DD MM AAAA.
+//Mostra o número do dia no ano de uma data no formato DD MM AAAA
 #include <stdio.h>
 
 int main() {

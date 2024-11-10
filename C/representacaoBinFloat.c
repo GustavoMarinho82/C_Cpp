@@ -13,7 +13,7 @@ int main() {
     scanf("%f", &pontof._float);
     
     for (int i = 31; i >= 0; i--)
-        printf("%d", (pontof._int>>i) & 01);
+        printf("%d", (pontof._int >> i) & 1);
     
     return 0;
 }

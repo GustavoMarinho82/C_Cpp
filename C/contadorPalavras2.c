@@ -6,7 +6,7 @@ int main() {
     
     char frase[1024];
     fgets(frase, 1024, stdin); 
-    //Da errado se usar o scanf, porque ele encerra a leitura da string quando tem um " "
+    //Dá errado se usar o scanf, porque ele encerra a leitura da string quando tem um " "
     
     char *palavra = strtok(frase, SEPARACOES);
     
