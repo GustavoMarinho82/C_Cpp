@@ -65,7 +65,7 @@ int main() {
     scanf("%s", buffer);
 
     int tamanho = strlen(buffer);
-    int *V = (int*) malloc(sizeof(int)*tamanho);
+    int *V = malloc(sizeof(*V)*tamanho);
     
     for (int i = 0; i < tamanho; i++)
         V[i] = buffer[i] - '0';
@@ -80,7 +80,7 @@ int main() {
 }
 
 void imprimir_permutacao(int V[], int tamanho, int n_permutacao){
-    char *permutacao_str = (char*) malloc(sizeof(char)*tamanho);
+    char *permutacao_str = malloc(sizeof(*permutacao_str)*tamanho);
     int permutacao_valida = 1;
     
     for (int i = 0; ((permutacao_valida) && (i < tamanho)); i++){

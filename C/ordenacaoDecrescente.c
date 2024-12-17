@@ -7,7 +7,7 @@ int main() {
     int tamanho;
     scanf("%d", &tamanho);
     
-    double *vetor = (double*) malloc(sizeof(double)*tamanho);
+    double *vetor = malloc(sizeof(*vetor)*tamanho);
     
     for (int i = 0; i < tamanho; i++)
         scanf("%lf", &vetor[i]);

@@ -13,7 +13,7 @@ int main() {
 		perror("");
 		
 	} else {
-		while (fgets(linha, 256, arq) != NULL)
+		while (fgets(linha, sizeof(linha), arq) != NULL)
 			printf("%s", linha);
 		
 		fclose(arq);

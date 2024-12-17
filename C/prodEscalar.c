@@ -8,8 +8,8 @@ int main() {
     
     scanf("%d", &n);
     
-    int *A = (int*) malloc(sizeof(int)*n);
-    int *B = (int*) malloc(sizeof(int)*n);
+    int *A = malloc(sizeof(*A)*n);
+    int *B = malloc(sizeof(*B)*n);
     
     ler_vetor(A, n);
     ler_vetor(B, n);
