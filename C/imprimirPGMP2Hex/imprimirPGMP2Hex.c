@@ -22,7 +22,7 @@ int main() {
 		
 		ler_metadados(arq, &linhas, &colunas, &max);
 		
-		int* imagem = ler_imagem(arq, linhas, colunas, max);
+		int** imagem = ler_imagem(arq, linhas, colunas, max);
 		
 		fclose(arq); //Fecha o arquivo, porque ele não será mais utilizado
 		

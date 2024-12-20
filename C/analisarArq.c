@@ -13,7 +13,7 @@ int main() {
 		fprintf(stderr, "Erro no arquivo %s\n", nome_arq);
 		
 	} else {
-        int n_linhas = 1, chars_imprimiveis = 0, chars_lidos = 0, c;
+        int n_linhas = 0, chars_imprimiveis = 0, chars_lidos = 0, c;
         
 		while ((c = getc(arq)) != EOF) {
             if (isprint(c))
