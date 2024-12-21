@@ -4,7 +4,7 @@
 void ler_metadados(FILE* arq, int* linhas, int* colunas, int* max) {
 	char linha[256];
 	
-	while (fgets(linha, sizeof(linha), arq) != NULL) {
+	while (fgets(linha, sizeof(linha), arq)) {
 		//Lê a linha do cabeçalho que contém as linhas e as colunas e atribui às variáveis. Ignorando todas as linhas anteriores
 		if (sscanf(linha, "%d %d", colunas, linhas) == 2) 
 			break;

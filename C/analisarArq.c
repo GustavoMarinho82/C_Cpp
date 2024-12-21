@@ -11,24 +11,26 @@ int main() {
 	
 	if (arq == NULL) {
 		fprintf(stderr, "Erro no arquivo %s\n", nome_arq);
+		return 1;
 		
 	} else {
-        int n_linhas = 0, chars_imprimiveis = 0, chars_lidos = 0, c;
+        	int n_linhas = 0, chars_imprimiveis = 0, chars_lidos = 0, c;
         
 		while ((c = getc(arq)) != EOF) {
-            if (isprint(c))
-                chars_imprimiveis++;
+			if (isprint(c))
+                		chars_imprimiveis++;
                 
-            else if (c == 10)
-                n_linhas++;
+			else if (c == 10)
+                		n_linhas++;
                 
-            chars_lidos++;
-        }
+            		chars_lidos++;
+        	}
         
         fclose(arq);
         
         printf("Caracteres lidos: %d \nCaracteres imprimíveis: %d \nN° de linhas: %d \n", chars_lidos, chars_imprimiveis, n_linhas);
+        
+        return 0;
 	}
-    
-    return 0;
+
 }

@@ -11,11 +11,13 @@ int main() {
 	
 	if (arq == NULL) {
 		perror("");
+		return 1;
 		
 	} else {
 		while (fgets(linha, sizeof(linha), arq) != NULL)
 			printf("%s", linha);
 		
 		fclose(arq);
+		return 0;
 	}
 }

@@ -28,8 +28,11 @@ int main() {
 		
 		imprimir_imagem(imagem, linhas, colunas);
 		
+		for (int i = 0; i < linhas; i++)
+			free(imagem[i]);
+
 		free(imagem);
-		
-		return 0;
 	}
+	
+	return 0;
 }

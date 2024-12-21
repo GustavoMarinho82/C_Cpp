@@ -1,0 +1,11 @@
+PAULO EUSTAQUIO DUARTE PINTO                       201210320811 Rua do Catete 231 apto 1002, Catete, CEP 20123-100                01129257869 001 01246 032123-7 120.00
+GUILHERME LUCIO ABELHA MOTA                        201210049811 Rua Men de Sa 123 Sobrado, Centro, CEP 20001-104                  45896523688 033 12456 035698-7 102.45
+ALEXANDRE ROJAS                                    201210321711 Rua do Riachuelo 12 apto 307                                      45789614789 027 12458 032578-9 89.95
+MARIA ALICE SILVERIO DE BRITO                      201210047011 Rua do Russel 123 apto 209, Gloria, CEP 20112-192                 45678912364 011 12378 011457-8 115.77
+ROSA MARIA ESTEVES DA COSTA                        201210321311 Rua Sao Francisco Xavier 255, Maracana, CEP 20456-712             12345858778 001 23456 078459-8 89.85
+LEANDRO AUGUSTO JUSTEN MARZULO                     201210322411 Rua Nossa Senhora de Copacabana 123, Apto 1005, CEP 20145-987     47896461234 024 45758 124598-8 107.85
+ALEXANDRE SZTAJNBERG                               201210046711 Av Vieira Souto 109, 401, Ipanema, CEP 20445-777                  45567897464 004 67861 214587-4 175.98
+MARIA CLICIA STELLING DE CASTRO                    201210046511 Rua Conde de Bonfin 1033, 203 Tijuca, CEP 20102-001               78721425451 033 14898 125878-9 95.57
+ALEXANDRE DA COSTA SENA                            201210049911 Rua Machado de Assis 134, 201, Largo do Machado, CEP 20989-120    45678912364 007 52627 471239-9 97.54
+VERA MARIA BENJAMIM WERNECK                        201210047711 Rua das Laranjeiras 189, 709, Laranjeiras, CEP 23644-478          65432198734 456 14583 189456-8 134.89
+50                                                 12           65                                                                 11          3   5     8        float                              
