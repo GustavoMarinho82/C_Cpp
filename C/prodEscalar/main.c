@@ -6,7 +6,11 @@
 
 int main() {
 	char nome_arq1[256], nome_arq2[256];
-	scanf("%s %s", nome_arq1, nome_arq2);
+	
+	printf("Nome do arquivo que contém o 1° vetor: ");
+	scanf("%s", nome_arq1);
+	printf("Nome do arquivo que contém o 2° vetor: ");
+	scanf("%s", nome_arq2);
 	
 	FILE* arq1 = fopen(nome_arq1, "r");
 	FILE* arq2 = fopen(nome_arq2, "r");
@@ -33,7 +37,7 @@ int main() {
 			fprintf(stderr, "Erro: os vetores possuem comprimentos distintos.\n");
 		
 		} else {
-			printf("%.3lf\n", prod_escalar_rec(vet1, vet2, tam1));
+			printf("Produto escalar dos vetores: %.3lf\n", prod_escalar_rec(vet1, vet2, tam1));
 		}
 		
 		free(vet1);

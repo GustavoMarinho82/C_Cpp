@@ -2,23 +2,23 @@
 #include <stdio.h>
 
 int main() {
-    int diasMes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int dia, mes, ano, diaNoAno = 0;
+	int diasMes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	int dia, mes, ano, diaNoAno = 0;
     
-    //printf("Digite a data: (DD MM AAAA)\n");
-    scanf("%d %d %d", &dia, &mes, &ano);
+	printf("Digite a data (DD MM AAAA): ");
+	scanf("%d %d %d", &dia, &mes, &ano);
     
-    if (ano % 4 == 0)
-        diasMes[1] = 29;
+	if (ano % 4 == 0)
+		diasMes[1] = 29;
     
-    if ((mes > 0) && (mes <= 12) && (dia > 0) && (dia <= diasMes[mes-1])){
-        for (int i = 0; i < (mes-1); i++)
-            diaNoAno += diasMes[i];
+	if ((mes > 0) && (mes <= 12) && (dia > 0) && (dia <= diasMes[mes-1])) {
+		for (int i = 0; i < (mes-1); i++)
+			diaNoAno += diasMes[i];
         
-        diaNoAno += dia;
-    }
+		diaNoAno += dia;
+	}
     
-    printf("%d", diaNoAno);
+	printf("N° do dia no ano: %d\n", diaNoAno);
     
-    return 0;
+	return 0;
 }

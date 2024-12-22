@@ -4,37 +4,45 @@
 void selection_sort_dec(double[], int);
 
 int main() {
-    int tamanho;
-    scanf("%d", &tamanho);
+	int tamanho;
     
-    double *vetor = malloc(sizeof(*vetor)*tamanho);
+	printf("Tamanho do vetor: ");
+	scanf("%d", &tamanho);
     
-    for (int i = 0; i < tamanho; i++)
-        scanf("%lf", &vetor[i]);
+	double *vetor = malloc(sizeof(*vetor)*tamanho);
     
-    selection_sort_dec(vetor, tamanho);
+	printf("Elementos do vetor: \n");
     
-    for (int i = 0; i < tamanho; i++)
-        printf("%lf ", vetor[i]);
-        
-    free(vetor);
+	for (int i = 0; i < tamanho; i++)
+		scanf("%lf", &vetor[i]);
     
-    return 0;
+	selection_sort_dec(vetor, tamanho);
+    
+	printf("Vetor ordenado decrescentemente: \n");
+    
+	for (int i = 0; i < tamanho; i++)
+		printf("%lf ", vetor[i]);
+
+	printf("\n");
+	        
+	free(vetor);
+    
+	return 0;
 }
 
 void selection_sort_dec(double vetor[], int tamanho){ //θ(tamanho^2)
-    if (tamanho > 1){
-        int menor = 0;
+	if (tamanho > 1){
+		int menor = 0;
+
+		for (int i = 1; i < tamanho; i++){
+			if (vetor[menor] > vetor[i])
+				menor = i;
+		}
         
-        for (int i = 1; i < tamanho; i++){
-            if (vetor[menor] > vetor[i])
-                menor = i;
-        }
+		double temp = vetor[menor];
+		vetor[menor] = vetor[tamanho-1];
+		vetor[tamanho-1] = temp;
         
-        double temp = vetor[menor];
-        vetor[menor] = vetor[tamanho-1];
-        vetor[tamanho-1] = temp;
-        
-        selection_sort_dec(vetor, tamanho-1);
-    }
+		selection_sort_dec(vetor, tamanho-1);
+	}
 }

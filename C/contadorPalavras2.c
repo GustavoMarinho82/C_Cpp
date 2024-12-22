@@ -2,22 +2,22 @@
 #include <string.h>
 
 int main() {
-    const char SEPARACOES[7] = " .,;:\n\t";
+	const char SEPARACOES[] = " .,;:\n\t";
+	char frase[1024];
     
-    char frase[1024];
-    fgets(frase, 1024, stdin); 
-    //Dá errado se usar o scanf, porque ele encerra a leitura da string quando tem um " "
-    
-    char *palavra = strtok(frase, SEPARACOES);
-    
-    int contador = 0; //Contador de palavras da frase
-    
-    while (palavra != NULL) {
-        palavra = strtok(NULL, SEPARACOES);
-        contador++;
-    }
+	printf("Digite um frase: ");
+	fgets(frase, sizeof(frase), stdin); 
 
-    printf("%d", contador);
+	char *palavra = strtok(frase, SEPARACOES);
     
-    return 0;
+	int contador = 0; //Contador de palavras da frase
+    
+	while (palavra != NULL) {
+		palavra = strtok(NULL, SEPARACOES);
+		contador++;
+	}
+
+	printf("Quantidade de palavras: %d\n", contador);
+    
+	return 0;
 }

@@ -4,27 +4,30 @@
 void ler_vetor(int[], int);
 
 int main() {
-    int n, prod_escalar = 0;
+	int n, prod_escalar = 0;
     
-    scanf("%d", &n);
+	printf("Digite o tamanho dos vetores: ");
+	scanf("%d", &n);
     
-    int *A = malloc(sizeof(*A)*n);
-    int *B = malloc(sizeof(*B)*n);
+	int *A = malloc(sizeof(*A)*n);
+	int *B = malloc(sizeof(*B)*n);
+
+	printf("Elementos do 1° vetor: \n");
+	ler_vetor(A, n);
+	printf("Elementos do 2° vetor: \n");
+	ler_vetor(B, n);
     
-    ler_vetor(A, n);
-    ler_vetor(B, n);
-    
-    for (int i = 0; i < n; i++)
-        prod_escalar += A[i] * B[i];
+	for (int i = 0; i < n; i++)
+		prod_escalar += A[i] * B[i];
         
-    printf("%d", prod_escalar);
+	printf("Produto escalar: %d\n", prod_escalar);
     
-    free(A); free(B);
+	free(A); free(B);
     
-    return 0;
+	return 0;
 }
 
 void ler_vetor(int V[], int tamanho){
-    for (int i = 0; i < tamanho; i++)
-        scanf("%d", &V[i]);
+	for (int i = 0; i < tamanho; i++)
+		scanf("%d", &V[i]);
 }

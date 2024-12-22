@@ -10,7 +10,7 @@ void imprimir_imagem(int**, int, int);
 int main() {
 	char nome_arq[256];
 	
-	printf("Caminho do .pgm a ser lido: ");
+	printf("Caminho do PGM a ser lido: ");
 	scanf("%s", nome_arq);
 	
 	FILE* arq = fopen(nome_arq, "r");

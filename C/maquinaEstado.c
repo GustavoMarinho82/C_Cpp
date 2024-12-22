@@ -10,7 +10,9 @@ int main() {
 	// 1 -> In word
 
 	char frase[1024];
-	fgets(frase, 1024, stdin); //Da errado se usar o scanf, porque ele encerra a leitura da string quando tem um " "
+	
+	printf("Digite uma frase: ");
+	fgets(frase, 1024, stdin);
     	
 	int contador = 0;
 	int p = 0;
@@ -33,7 +35,7 @@ int main() {
 		p++;
 	}
 	
-	printf("%d \n", contador);
+	printf("N° de palavras: %d\n", contador);
 	
 	return 0;
 }

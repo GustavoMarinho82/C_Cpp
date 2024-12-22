@@ -45,57 +45,63 @@ Entrada: 740 Saída: 740 748 710 718 750 758 770 778 440 448 410 418 450 458 470
 #include <math.h>
 
 const int ADJACENTES[10][5] = { //Também inclue o próprio número, para fins práticos
-    {0,8,-1,-1,-1},
-    {1,2,4,-1,-1},
-    {2,1,3,5,-1},
-    {3,2,6,-1,-1},
-    {4,1,5,7,-1},
-    {5,2,4,6,8},
-    {6,3,5,9,-1},
-    {7,4,8,-1,-1},
-    {8,0,5,7,9},
-    {9,6,8,-1,-1}
+	{0,8,-1,-1,-1},
+	{1,2,4,-1,-1},
+	{2,1,3,5,-1},
+	{3,2,6,-1,-1},
+	{4,1,5,7,-1},
+	{5,2,4,6,8},
+	{6,3,5,9,-1},
+	{7,4,8,-1,-1},
+	{8,0,5,7,9},
+	{9,6,8,-1,-1}
 };
 
 void imprimir_permutacao(int[], int, int);
 
 int main() {
-    //Lendo o número base das permutações
-    char buffer[4]; //O número deve estar entre o intervalo de [0, 9999]. Se quiser aumentar esse intervalo, aumente o tamanho da variável buffer
-    scanf("%s", buffer);
+	//Lendo o número base das permutações
+	char buffer[4]; //O número deve estar entre o intervalo de [0, 9999]. Se quiser aumentar esse intervalo, aumente o tamanho da variável buffer
+    
+	printf("Digite um número entre 0 e 9999: ");
+	scanf("%s", buffer);
 
-    int tamanho = strlen(buffer);
-    int *V = malloc(sizeof(*V)*tamanho);
+	int tamanho = strlen(buffer);
+	int *V = malloc(sizeof(*V) * tamanho);
     
-    for (int i = 0; i < tamanho; i++)
-        V[i] = buffer[i] - '0';
+	for (int i = 0; i < tamanho; i++)
+		V[i] = buffer[i] - '0';
     
-    //Fazendo as permutações
-    for (int i = 0; i < pow(5, tamanho); i++)
-        imprimir_permutacao(V, tamanho, i);
-
-    free(V);
+	printf("Permutações de fechadura: \n");
     
-    return 0;
+	//Fazendo as permutações
+	for (int i = 0; i < pow(5, tamanho); i++)
+		imprimir_permutacao(V, tamanho, i);
+    
+	printf("\n");
+    
+	free(V);
+    
+	return 0;
 }
 
 void imprimir_permutacao(int V[], int tamanho, int n_permutacao){
-    char *permutacao_str = malloc(sizeof(*permutacao_str)*tamanho);
-    int permutacao_valida = 1;
+	char *permutacao_str = malloc(sizeof(*permutacao_str)*tamanho);
+	int permutacao_valida = 1;
     
-    for (int i = 0; ((permutacao_valida) && (i < tamanho)); i++){
-        int x = V[i], y = (n_permutacao / pow(5, tamanho-i-1)); 
-        n_permutacao %= (int) pow(5, tamanho-i-1);
+	for (int i = 0; ((permutacao_valida) && (i < tamanho)); i++){
+		int x = V[i], y = (n_permutacao / pow(5, tamanho-i-1)); 
+		n_permutacao %= (int) pow(5, tamanho-i-1);
         
-        if (ADJACENTES[x][y] == -1)
-            permutacao_valida = 0;
+		if (ADJACENTES[x][y] == -1)
+			permutacao_valida = 0;
         
-        else
-            permutacao_str[i] = ADJACENTES[x][y] + '0';
-    }
+		else
+			permutacao_str[i] = ADJACENTES[x][y] + '0';
+    	}
     
-    if (permutacao_valida)
-        printf("%s ", permutacao_str);
+	if (permutacao_valida)
+	printf("%s ", permutacao_str);
         
-    free(permutacao_str);
+	free(permutacao_str);
 }

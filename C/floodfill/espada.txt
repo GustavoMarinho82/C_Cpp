@@ -1,0 +1,21 @@
+          X         
+         X X        
+        X   X       
+        X   X       
+        X   X       
+        X   X       
+        X   X       
+        X   X       
+        X   X       
+        X   X       
+        X   X       
+   XXXXXX   XXXXXX  
+  X               X 
+   XXXXXX   XXXXXX  
+        X   X       
+        X   X       
+        X   X       
+        XXXXX       
+                    
+                    
+12 10
