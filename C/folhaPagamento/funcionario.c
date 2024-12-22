@@ -92,11 +92,11 @@ void ordenar_funcionarios(struct Funcionarios funcionarios) {
 	int qtd_funcs = funcionarios.tamanho;
 	struct Funcionario ** funcs = funcionarios.pFuncs;
 	
-	for (int i = 0; i < qtd_funcs; i++) {
+	for (int i = 0; i < qtd_funcs - 1; i++) {
 		int menor = i;
 		
 		for (int j = i+1; j < qtd_funcs; j++) {
-			if (strcmp(funcs[i]->nome, funcs[j]->nome) > 0) 
+			if (strcmp(funcs[menor]->nome, funcs[j]->nome) > 0) 
 				menor = j;
 		}
 		
