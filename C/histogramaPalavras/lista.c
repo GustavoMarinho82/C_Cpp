@@ -68,7 +68,6 @@ void destruir_lista(struct No** L) {
 }
 
 
-
 //FUNÇÕES RECURSIVAS
 void criar_lista_rec2(struct No** L, char* palavra) {
 	if (palavra != NULL) {
