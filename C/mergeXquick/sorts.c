@@ -1,29 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void interescalar(int* V, int inicio, int meio, int fim) {
+void intercalar(int* V, int inicio, int meio, int fim) {
 	int* V_aux = malloc(sizeof(int) * (fim - inicio + 1));
-    
-	int* p1 = V + inicio;
-	int* p2 = V + meio + 1;
-
-	int i = 0;
+	int i1 = inicio, i2 = meio + 1, i_aux = 0;
 	
-	while ((p1 <= V + meio) && (p2 <= V + fim)) {
-		if (*p1 <= *p2)
-			V_aux[i++] = *(p1++);
+	while ((i1 <= meio) && (i2 <= fim)) {
+		if (V[i1] < V[i2])
+			V_aux[i_aux++] = V[i1++];
 		
 		else
-			V_aux[i++] = *(p2++);
+			V_aux[i_aux++] = V[i2++];
 	}
 	
-	while (p1 <= V + meio)
-		V_aux[i++] = *(p1++);
+	while (i1 <= meio)
+		V_aux[i_aux++] = V[i1++];
 	
-	while (p2 <= V + fim)
-		V_aux[i++] = *(p2++);
+	while (i2 <= fim)
+		V_aux[i_aux++] = V[i2++];
 
-	for (int i = 0; i <= (fim - inicio); i++)
+	for (int i = 0; i < i_aux; i++)
 		V[inicio + i] = V_aux[i];
         
 	free(V_aux);
@@ -31,11 +27,11 @@ void interescalar(int* V, int inicio, int meio, int fim) {
 
 void merge_sort(int* V, int inicio, int fim) {
 	if (fim > inicio) {
-		int meio = (inicio + fim) /2 ;
+		int meio = (inicio + fim) / 2;
 
 		merge_sort(V, inicio, meio);
 		merge_sort(V, meio+1, fim);
-		interescalar(V, inicio, meio, fim);
+		intercalar(V, inicio, meio, fim);
 	}
 }
 
