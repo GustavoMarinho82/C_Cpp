@@ -1,2 +1,2 @@
-# C_Cpp
-Repositório de códigos em C e C++
+# c_repo
+Repositório de códigos em C soltos
