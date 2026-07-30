@@ -1,2 +1,2 @@
 # c_repo
-Repositório de códigos em C soltos
+Repositório feito para salvar meus códigos em C soltos
